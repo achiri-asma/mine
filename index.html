@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio Asma ACHIRI, Full-stack Web Developer">
+    <title>Asma ACHIRI - Full-stack Web Developer</title>
+
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Asma ACHIRI - Full-stack Web Developer">
+    <meta property="og:description" content="Portfolio Asma ACHIRI, Full-stack Web Developer">
+
+
+    <link rel="icon" type="image/png" href="images/favicon.png">
+
+    <!--  GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rammetto+One&display=swap" rel="stylesheet">
+
+    <!-- LINK CSS -- FONT AWESOME -->
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/hero.css">
+    <link rel="stylesheet" href="css/music-player.css">
+    <link rel="stylesheet" href="css/sections.css">
+    <link rel="stylesheet" href="css/about.css">
+    <link rel="stylesheet" href="css/skills.css">
+    <link rel="stylesheet" href="css/projects.css">
+    <link rel="stylesheet" href="css/blog.css">
+    <link rel="stylesheet" href="css/experience.css">
+    <link rel="stylesheet" href="css/contact.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/awards.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/wakatime.css">
+    <link rel="stylesheet" href="css/featured-projects.css">
+    <link rel="stylesheet" href="css/interactive-skills.css">
+    <link rel="stylesheet" href="css/theme.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <style>
+        .theme-switcher-dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-toggle {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid var(--border-color);
+            color: var(--text-primary);
+            padding: 0.5rem 1rem;
+            border-radius: 9999px;
+            cursor: pointer;
+            font-size: 0.875rem;
+            font-weight: 600;
+            transition: background-color 0.3s, border-color 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .dropdown-toggle:hover {
+            background-color: rgba(255, 255, 255, 0.15);
+        }
+
+        .dropdown-menu {
+            display: none;
+            position: absolute;
+            background-color: var(--bg-card);
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+            border-radius: 0.5rem;
+            border: 1px solid var(--border-color);
+            padding: 0.5rem 0;
+            right: 0;
+            bottom: 100%;
+            margin-bottom: 0.5rem;
+        }
+
+        .dropdown-menu a {
+            color: var(--text-primary);
+            padding: 0.75rem 1rem;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+            transition: background-color 0.2s;
+        }
+
+        .dropdown-menu a:hover {
+            background-color: rgba(255, 255, 255, 0.05);
+        }
+
+        .dropdown-menu.show {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- header -->
+    <div class="scroll-progress-bar"></div>
+
+    <header id="header-placeholder" class="main-header">
+        <!-- Logo -->
+        <div class="header-logo-group">
+            <a class="logo" href="index.html">Aa.</a>
+        </div>
+
+        <div class="header-navigation">
+            <nav class="main-nav">
+                <a href="index.html#hero" data-page="home">Home</a>
+                <a href="index.html#about" data-page="about">About</a>
+                <a href="index.html#skills" data-page="skills">Skills</a>
+                <a href="project.html" data-page="projects">Projects</a>
+                <a href="index.html#contact" data-page="contact">Contact</a>
+                <span class="nav-indicator"></span>
+            </nav>
+
+            <button id="theme-toggle" class="theme-toggle-btn">
+                <i class="fas fa-sun"></i>
+                <i class="fas fa-moon"></i>
+            </button>
+
+        </div>
+    </header>
+
+    <main>
+        <!-- ====================================================== -->
+        <!-- Section 1: Hero -->
+        <!-- ====================================================== -->
+        <section id="hero" class="hero-section">
+            <div class="hero-background">
+                <div class="shape shape-1"></div>
+                <div class="shape shape-2"></div>
+                <div class="shape shape-3"></div>
+            </div>
+            <div class="container hero-container">
+
+
+                <!-- Hero Text Content -->
+                <div class="hero-text-content">
+                    <div class="welcome-badge animate-on-scroll" style=" color: var(--text-secondary);">Available for
+                        Freelance</div>
+                    <h2 style=" color:var(--text-secondary)">Hi, I am Asma ACHIRI</h2>
+                    <h1 class="animate-on-scroll" style=" color:var(--text-secondary)">
+                        I'm <span class="gradient-text" id="typed"></span>
+                    </h1>
+                    <p class="animate-on-scroll" style="margin-top: 50px;">
+                        I build modern, responsive, and user-focused web and mobile applications
+                        with clean code and thoughtful design.
+                    </p>
+                    <div class="hero-buttons animate-on-scroll">
+                        <a class="btn btn-primary" id="download-cv">Get my CV</a>
+                        <a href="#contact" class="btn btn-secondary">Let's talk</a>
+                    </div>
+                    <div class="social-links animate-on-scroll">
+                        <a href="https://www.linkedin.com/in/asma-achiri-a6b747228" aria-label="LinkedIn"><i
+                                class="fab fa-linkedin-in"></i></a>
+                        <a href="https://github.com/achiri-asma" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="mailto:aachiri.freelancer@gmail.com" aria-label="Gmail"><i
+                                class="fas fa-envelope"></i></a>
+                        <a href="https://www.facebook.com/profile.php?id=61592117154852" aria-label="Facebook"><i
+                                class="fab fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/souma.dev?igsh=MXJsenNib3JyZjliaA=="
+                            aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+        <!-- ====================================================== -->
+        <!-- Section 2: About Me -->
+        <!-- ====================================================== -->
+        <section id="about" class="content-section">
+            <div class="container">
+                <div class="section-header animate-on-scroll">
+                    <h2 class="section-title gradient-text">Who am I?</h2>
+                </div>
+                <div class="about-grid">
+                    <div class="about-image-wrapper animate-on-scroll">
+                        <img src="images/photo.png" alt="A pensive anime character in a snowy city scene">
+                    </div>
+                    <div class="about-text-content animate-on-scroll">
+                        <p>I'm Asma ACHIRI, a Computer Science Engineering graduate and Full-Stack Developer passionate
+                            about building modern, scalable, and user-focused web and mobile applications. Over the past
+                            three years, I have worked on a variety of projects that have strengthened my expertise in
+                            full-stack development, software architecture, and creating intuitive digital experiences.
+                        </p>
+                        <p>Driven by curiosity and a passion for innovation, I enjoy transforming ideas into reliable,
+                            high-performance solutions using modern technologies. My dedication to impactful software
+                            development was recognized with the Innovative Project label awarded by Algeria's Ministry
+                            of Knowledge Economy. I am always eager to learn, embrace new challenges, and collaborate on
+                            projects that make a meaningful difference.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ====================================================== -->
+        <!-- Section 3: Skills -->
+        <!-- ====================================================== -->
+        <section id="skills" class="content-section">
+            <div class="container">
+                <div class="section-header animate-on-scroll">
+                    <h2 class="section-title gradient-text">What I work with</h2>
+                </div>
+
+                <div class="skills-wrapper">
+                    <div class="skills-grid">
+                        <div class="glass-card">
+                            <h3 class="section-titlee gradient-text">Mobile Development</h3>
+                            <img src="./icons/flutter.png" alt="flutter">
+                            <img src="./icons/kotlin.png" alt="kotlin">
+                            <img src="./icons/java.png" alt="java">
+                        </div>
+                        <div class="glass-card">
+                            <h3 class="section-titlee gradient-text">Frontend Development</h3>
+                            <img src="./icons/html.png" alt="html">
+                            <img src="./icons/css.png" alt="css">
+                            <img src="./icons/javascript.png" alt="javascript">
+                            <img src="./icons/react.png" alt="react">
+                            <img src="./icons/vue-js.png" alt="vue js">
+                            <img src="./icons/bootstrap.png" alt="bootstrap">
+                            <img src="./icons/tailwind-css.png" alt="tailwind css">
+                        </div>
+                        <div class="glass-card">
+                            <h3 class="section-titlee gradient-text">Backend Development</h3>
+                            <img src="./icons/python.png" alt="python">
+                            <img src="./icons/node-js.png" alt="node-js">
+                            <img src="./icons/java.png" alt="java">
+                            <img src="./icons/rest-api.png" alt="rest api">
+                            <img src="./icons/django.png" alt="django">
+                            <img src="./icons/spring-boot.png" alt="spring boot">
+                        </div>
+                        <div class="glass-card">
+                            <h3 class="section-titlee gradient-text">Databases & Tools</h3>
+                            <img src="./icons/mysql.png" alt="mysql">
+                            <img src="./icons/supabase.png" alt="supabase">
+                            <img src="./icons/postgresql.png" alt="postgre sql">
+                            <img src="./icons/mongo-db.png" alt="mongo db">
+                            <img src="./icons/oracle.png" alt="oracle">
+                            <img src="./icons/vs-code.png" alt="vs code">
+                            <img src="./icons/android-studio.png" alt="android studio">
+                            <img src="./icons/github.png" alt="github">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ====================================================== -->
+        <!-- Section 4: Featured Works (NEW ALTERNATING LAYOUT) -->
+        <!-- ====================================================== -->
+        <section id="projects" class="content-section">
+            <div class="container">
+                <div class="section-header animate-on-scroll">
+                    <h2 class="section-title gradient-text">Some of my recent projects</h2>
+                </div>
+
+                <!-- PROJECT 1: Game Store (Layout: Image Left, Details Right) -->
+                <div class="project-showcase-grid animate-on-scroll">
+                    <div class="showcase-card">
+                        <div class="showcase-header"><span>Walid Store CarXStreet</span></div>
+                        <div class="showcase-content">
+                            <div class="text-features">
+                                <h1>Game Store</h1>
+                                <h4 class="feature-title">FEATURES</h4>
+                                <ul>
+                                    <li>Developed a modern landing page using HTML, CSS, JavaScript, and Bootstrap.</li>
+                                    <li>Built a dedicated online store for selling CarX Street accounts and digital game
+                                        products.</li>
+                                    <li>Implemented a fully responsive interface to ensure an optimal user experience on
+                                        all devices.</li>
+                                </ul>
+                            </div>
+                            <div class="image-gallery">
+                                <img src="images/Prpject1.PNG" alt="Walid Store CarXStreet 1" class="showcase-img">
+                                <img src="images/Project1-1.PNG" alt="Walid Store CarXStreet 2" class="showcase-img">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="details-column">
+                        <h2>Walid Store CarXStreet</h2>
+                        <p class="project-category gradient-text">Web,Game Store, Landing Page</p>
+                        <div class="project-tags">
+                            <span>Html</span><span>Css</span><span>JavaScript</span><span>Bootstrap</span>
+                        </div>
+                        <div class="description-box glass-card">
+                            <p>A responsive online game store offering a smooth and secure shopping experience for CarX
+                                Street accounts.</p>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://achiri-asma.github.io/Walid_store_carxstreet/"
+                                aria-label="Project Details"><i class="fas fa-link"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PROJECT 2: Client Survey (Layout: Details Left, Image Right) -->
+                <div class="project-showcase-grid layout-reversed animate-on-scroll">
+                    <div class="showcase-card">
+                        <div class="showcase-header"><span>Client Survey Project</span></div>
+                        <div class="showcase-content">
+                            <div class="text-features">
+                                <h1>Client Survey</h1>
+                                <h4 class="feature-title">FEATURES</h4>
+                                <ul>
+                                    <li>Developed a user-friendly client survey platform using Html and Formspree.
+                                    </li>
+                                    <li>Designed a responsive interface for collecting client requirements through an
+                                        intuitive questionnaire.</li>
+                                    <li>Integrated Formspree for secure and reliable submission of survey responses
+                                        without a custom backend.</li>
+                                </ul>
+                            </div>
+                            <div class="image-gallery">
+                                <img src="images/Project2.PNG" alt="Web Form Homepage" class="showcase-img">
+                                <img src="images/Project2-1.PNG" alt="Web Form Homepage" class="showcase-img">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="details-column">
+                        <h2>Client Survey</h2>
+                        <p class="project-category gradient-text">Web, Web Form</p>
+                        <div class="project-tags"><span>Html</span><span>Formspree</span>
+                        </div>
+                        <div class="description-box glass-card">
+                            <p>A modern client survey platform designed to streamline client onboarding by collecting
+                                project requirements through a simple and intuitive questionnaire.</p>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://achiri-asma.github.io/Questionnaire-client/"
+                                aria-label="Project Details"><i class="fas fa-link"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PROJECT 3: Foodia -->
+                <div class="project-showcase-grid animate-on-scroll">
+                    <div class="showcase-card">
+                        <div class="showcase-header"><span>Foodia Project</span></div>
+                        <div class="showcase-content">
+                            <div class="text-features">
+                                <h1>Foodia</h1>
+                                <h4 class="feature-title">FEATURES</h4>
+                                <ul>
+                                    <li>Built an AI-powered mobile application promoting healthy and informed food
+                                        choices.</li>
+                                    <li>Implemented real-time product analysis through barcode scanning and nutritional
+                                        insights.</li>
+                                    <li>Integrated personalized recommendations and nearby healthy store discovery.</li>
+                                </ul>
+                            </div>
+                            <div class="image-gallery">
+                                <img src="images/Project3.jpg" alt="Foodia UI" class="showcase-img1">
+                                <img src="images/Project3-1.jpg" alt="Foodia UI" class="showcase-img1">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="details-column">
+                        <h2>Foodia</h2>
+                        <p class="project-category gradient-text">Mobile application</p>
+                        <div class="project-tags ">
+                            <span>Flutter</span><span>Node.js</span><span>Python</span>
+                        </div>
+                        <div class="description-box glass-card">
+                            <p>An AI-powered mobile application that helps users make healthier food choices through
+                                barcode scanning, personalized recommendations, and smart nutritional insights. Awarded
+                                the Innovative Project label for its innovative approach.</p>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://drive.google.com/drive/folders/1Gcyt07M8MAzPS4Na5vzJBWsMNRuVpIKw?usp=sharing"
+                                target="_blank" aria-label="Live Demo"><i class="fas fa-link"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-buttons animate-on-scroll">
+                    <a href="https://github.com/achiri-asma" class="btn btn-secondary">View more on GitHub</a>
+                </div>
+
+            </div>
+
+
+        </section>
+
+
+        <!-- ====================================================== -->
+        <!-- Section 3: Contact  -->
+        <!-- ====================================================== -->
+        <section id="contact" class="content-section">
+            <div class="container">
+                <div class="section-header animate-on-scroll">
+
+                    <h2 class="section-title gradient-text">Have a Project in Mind? Let's Talk</h2>
+
+                </div>
+                <div class="contact-grid">
+                    <div class="contact-content">
+                        <div class="contact-info-wrapper glass-card animate-on-scroll">
+                            <h3>Contact Information</h3>
+                            <div class="contact-item">
+                                <i class="fas fa-envelope"></i>
+                                <div>
+                                    <span>Email</span>
+                                    <a href="mailto:aachiri.freelancer@gmail.com">aachiri.freelancer@gmail.com</a>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fab fa-facebook"></i>
+                                <div>
+                                    <span>Facebook</span>
+                                    <a href="https://www.facebook.com/profile.php?id=61592117154852"
+                                        target="_blank">Souma Dev</a>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fab fa-instagram"></i>
+                                <div>
+                                    <span>Instagram</span>
+                                    <a href="https://www.facebook.com/profile.php?id=61592117154852"
+                                        target="_blank">souma.dev</a>
+                                </div>
+                            </div>
+
+                            <img src="../images/tof.png" alt="contact" class="contact-image">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+    <footer id="footer-placeholder" class="main-footer">
+        <p class="footer-copyright">
+            © <span id="currentYear"></span> All rights reserved. Designed &amp; Developed by me.
+        </p>
+    </footer>
+
+
+    <audio id="audio-source"></audio>
+    <script src="js/playlist.js"></script>
+    <script src="js/scripts.js"></script>
+    <script src="js/load-components.js"></script>
+    <script src="js/load-sections.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script>
+        // Christmas specific scripts
+        document.addEventListener('DOMContentLoaded', () => {
+            // Snowfall
+            const snowContainer = document.querySelector('.snow-container');
+            if (snowContainer) {
+                for (let i = 0; i < 150; i++) {
+                    const snowflake = document.createElement('div');
+                    snowflake.classList.add('snowflake');
+                    const size = Math.random() * 4 + 2;
+                    snowflake.style.width = size + 'px';
+                    snowflake.style.height = size + 'px';
+                    snowflake.style.left = Math.random() * 100 + 'vw';
+                    snowflake.style.animationDelay = Math.random() * -10 + 's';
+                    snowflake.style.animationDuration = 5 + Math.random() * 5 + 's';
+                    snowflake.style.opacity = Math.random();
+                    snowContainer.appendChild(snowflake);
+                }
+            }
+
+
+            const dropdownToggle = document.querySelector('.theme-switcher-dropdown .dropdown-toggle');
+            const dropdownMenu = document.querySelector('.theme-switcher-dropdown .dropdown-menu');
+
+            if (dropdownToggle && dropdownMenu) {
+                dropdownToggle.addEventListener('click', () => {
+                    dropdownMenu.classList.toggle('show');
+                });
+
+                window.addEventListener('click', (event) => {
+                    if (!event.target.matches('.dropdown-toggle') && !event.target.matches('.dropdown-toggle i')) {
+                        if (dropdownMenu.classList.contains('show')) {
+                            dropdownMenu.classList.remove('show');
+                        }
+                    }
+                });
+            }
+        });
+
+        const typed = new Typed("#typed", {
+            strings: [
+                "Full Stack Web Developer",
+                "Mobile Developer",
+            ],
+            typeSpeed: 70,
+            backSpeed: 40,
+            backDelay: 1800,
+            loop: true,
+            showCursor: true,
+            cursorChar: "|"
+        });
+
+        document.getElementById("download-cv").addEventListener("click", () => {
+            const link = document.createElement("a");
+            link.href = "../assets/Asma_Achiri_CV.pdf";
+            link.download = "Asma_Achiri_CV.pdf";
+            link.click();
+        });
+
+        document.getElementById("currentYear").textContent = new Date().getFullYear();
+
+        document.addEventListener("mousemove", () => {
+            console.log("mousemove");
+        });
+
+
+
+    </script>
+
+
+</body>
+
+</html>

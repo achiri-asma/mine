@@ -1,0 +1,33 @@
+/* ====================================================== */
+/* --- SKILLS SECTION --- */
+/* ====================================================== */
+
+#skills .section-badge {
+    display: inline-block;
+}
+
+.skills-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+}
+
+.skills-grid img{
+    width: 68px;
+    height: 68px;
+    padding: 5px;
+    justify-items: center;
+}
+
+
+@media (max-width: 768px) {
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+}
+

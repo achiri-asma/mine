@@ -1,0 +1,31 @@
+/* ====================================================== */
+/* --- FOOTER  --- */
+/* ====================================================== */
+.main-footer {
+    background-color: var(--color-surface);
+    color: var(--text-secondary);
+    border-top: 1px solid var(--border-color);
+    transition: background-color 0.3s, border-color 0.3s;
+    /* Thêm transition cho mượt */
+}
+
+
+
+
+
+.main-footer p {
+    padding: 1.5rem 0;
+    font-size: 1rem;
+    color: var(--text-secondary);
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .main-footer p {
+        padding: 1.5rem 0;
+        font-size: 0.75rem;
+        color: var(--text-secondary);
+        text-align: center;
+    }
+
+}

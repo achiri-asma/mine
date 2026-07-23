@@ -1,0 +1,129 @@
+/* ====================================================== */
+/* --- HEADER --- */
+/* ====================================================== */
+.scroll-progress-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 4px;
+    background: linear-gradient(to right, var(--gradient-purple), var(--gradient-pink));
+    width: 0%;
+    z-index: 1000;
+    transition: width 0.1s linear;
+}
+
+.main-header {
+    position: fixed;
+    top: 1.5rem;
+    left: 50%;
+    z-index: 999;
+    width: 90%;
+    max-width: 1400px;
+    background: rgba(24, 24, 27, 0.8);
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--border-color);
+    border-radius: 9999px;
+    padding: 0.75rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    opacity: 0;
+    transform: translate(-50%, -100px);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+
+.logo {
+    font-weight: bold;
+    font-size: 45px;
+    color: var(--text-primary);
+    font-family: "Rammetto One", sans-serif;
+    margin-left: 10px;
+}
+
+.header-logo-group {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.header-navigation {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+
+@keyframes pulse-star {
+    0%, 100% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.2); opacity: 0.8; }
+}
+
+
+.main-header.visible {
+    opacity: 1;
+    transform: translateX(-50%);
+}
+
+.logo {
+    font-weight: bold;
+    font-size: 1.25rem;
+    text-decoration: none;
+    color: var(--text-primary);
+}
+
+.logo span {
+    background: linear-gradient(to right, var(--gradient-purple), var(--gradient-pink));
+    -webkit-text-fill-color: transparent;
+}
+
+.main-nav {
+    position: relative;
+    left: -15%;
+    transform: translateX(-50%);
+    width: max-content;
+}
+
+.main-nav a {
+    position: relative;
+    z-index: 1;
+    padding: 0.5rem 1rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.3s;
+    margin-right: 30px;
+}
+
+.main-nav a:hover {
+    color: var(--text-primary);
+}
+
+.main-nav a.is-active {
+    color: var(--text-primary);
+}
+
+/* Style*/
+.nav-indicator {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 100%;
+    background-color: rgba(0, 247, 255, 0.1);
+    border-radius: 9999px;
+    z-index: 0;
+    transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+    opacity: 0;
+}
+
+@media (max-width: 768px) {
+    .main-header,
+    .header-navigation {
+        flex-direction: row !important;
+    }
+
+    .header-navigation {
+        width: auto;
+    }
+}
