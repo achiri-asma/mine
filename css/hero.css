@@ -136,11 +136,11 @@
         text-align: center;
     }
 .hero-text-content p {
-        width: 250px;
+        width: 300px;
         text-align: center;
          margin: 0 auto;
     }
     .hero-text-content p {
-    font-size: 1rem;
+    font-size: 0.9rem;
 }
 }
