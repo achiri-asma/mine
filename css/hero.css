@@ -55,7 +55,7 @@
 
 .hero-text-content p {
     font-size: 1.04rem;
-    max-width: 650px;
+    max-width: 600px;
     margin: 0 auto;
     text-align: center;
     color: var(--text-secondary);
@@ -136,11 +136,11 @@
         text-align: center;
     }
 .hero-text-content p {
-        width: 200px;
+        width: 100px;
         text-align: center;
          margin: 0 auto;
     }
     .hero-text-content p {
-    font-size: 0.9rem;
+    font-size: 0.5rem;
 }
 }
