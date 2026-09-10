@@ -172,7 +172,7 @@
 
     .image-gallery:has(> :only-child) .showcase-img,
     .image-gallery:has(> :only-child) .showcase-img1 {
-        max-width: 320px;
+        max-width: 150px;
     }
 
     .showcase-header span {
@@ -211,14 +211,28 @@
 }
 
 /* ---------- Petits mobiles (<= 480px) ---------- */
+/* ---------- Petits mobiles (<= 480px) ---------- */
+
 @media (max-width: 480px) {
+
     .showcase-card {
         padding: 1rem;
     }
 
+    .image-gallery {
+        gap: 0.7rem;
+    }
+
     .showcase-img,
     .showcase-img1 {
-        max-width: 260px;
+        width: 100% !important;
+        max-width: 100% !important;
+
+        /* Encore plus court sur petit écran */
+        max-height: 150px !important;
+
+        object-fit: cover;
+        border-radius: 10px;
     }
 
     .details-column {
