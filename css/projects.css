@@ -177,7 +177,7 @@
 
     .image-gallery:has(> :only-child) .showcase-img,
     .image-gallery:has(> :only-child) .showcase-img1 {
-        max-width: 320px;
+        max-width: 150px;
     }
 
     .showcase-header span {
