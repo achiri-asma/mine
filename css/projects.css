@@ -116,3 +116,123 @@
     font-size: 0.875rem;
     font-weight: 500;
 }
+/* ======================================================
+   RESPONSIVE — Section Projets (version corrigée v2)
+   À coller à la fin de css/projects.css
+   (remplace le bloc responsive précédent)
+   ====================================================== */
+
+/* ---------- Tablettes (<= 992px) ---------- */
+@media (max-width: 992px) {
+    .project-showcase-grid {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 1.5rem;
+    }
+
+    /* Ordre voulu sur mobile pour TOUTES les cartes :
+       1) details-column (titre, catégorie, tags, description)
+       2) showcase-card (image + features)
+       -> annule le comportement layout-reversed sur mobile */
+    .details-column {
+        order: 1 !important;
+    }
+
+    .showcase-card {
+        order: 2 !important;
+    }
+}
+
+/* ---------- Mobile (<= 768px) ---------- */
+@media (max-width: 768px) {
+
+    /* Dans la showcase-card : image d'abord, texte des features ensuite */
+    .showcase-content {
+        display: flex !important;
+        flex-direction: column-reverse !important;
+        gap: 1.25rem;
+    }
+
+    /* Galerie d'images plus grande, centrée */
+    .image-gallery {
+        display: flex !important;
+        flex-direction: row !important;
+        justify-content: center;
+        width: 100%;
+        gap: 0.75rem;
+    }
+
+    .showcase-img,
+    .showcase-img1 {
+        width: 100% !important;
+        max-width: 220px;
+        height: auto !important;
+        border-radius: 12px;
+    }
+
+    .image-gallery:has(> :only-child) .showcase-img,
+    .image-gallery:has(> :only-child) .showcase-img1 {
+        max-width: 320px;
+    }
+
+    .showcase-header span {
+        font-size: 1.1rem;
+    }
+
+    .text-features h1 {
+        font-size: 1.4rem;
+    }
+
+    .feature-title {
+        font-size: 0.9rem;
+    }
+
+    .text-features ul {
+        padding-left: 1.1rem;
+    }
+
+    .text-features li {
+        font-size: 0.9rem;
+        line-height: 1.5;
+    }
+
+    .details-column h2 {
+        font-size: 1.3rem;
+    }
+
+    .project-tags {
+        flex-wrap: wrap;
+        gap: 0.4rem;
+    }
+
+    .description-box {
+        padding: 1rem;
+    }
+}
+
+/* ---------- Petits mobiles (<= 480px) ---------- */
+@media (max-width: 480px) {
+    .showcase-card {
+        padding: 1rem;
+    }
+
+    .showcase-img,
+    .showcase-img1 {
+        max-width: 260px;
+    }
+
+    .details-column {
+        padding: 0 0.5rem;
+    }
+
+    .project-links {
+        justify-content: flex-start;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+        text-align: center;
+    }
+}
+
+/* ====================================================== MOBILE IMAGE LIGHTBOX ====================================================== */ .image-lightbox-overlay { position: fixed; inset: 0; width: 100%; height: 100dvh; display: flex; align-items: center; justify-content: center; background: rgba(0, 0, 0, 0.55); /* Blur portfolio behind */ backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); z-index: 999999; opacity: 0; visibility: hidden; pointer-events: none; transition: opacity 0.3s ease, visibility 0.3s ease; } /* Active modal */ .image-lightbox-overlay.active { opacity: 1; visibility: visible; pointer-events: auto; } /* Content */ .image-lightbox-content { position: relative; width: 90%; max-width: 500px; display: flex; align-items: center; justify-content: center; transform: scale(0.85); opacity: 0; transition: transform 0.3s ease, opacity 0.3s ease; } /* Animation */ .image-lightbox-overlay.active .image-lightbox-content { transform: scale(1); opacity: 1; } /* Image */ .image-lightbox-content img { display: block; width: 100%; max-height: 80dvh; object-fit: contain; border-radius: 18px; background: #fff; box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35); } /* Close button */ .image-lightbox-close { position: absolute; top: -45px; right: 0; width: 38px; height: 38px; border: none; border-radius: 50%; background: #fff; color: #222; font-size: 28px; line-height: 1; display: flex; align-items: center; justify-content: center; cursor: pointer; z-index: 10; box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2); } /* Prevent portfolio scrolling */ body.lightbox-open { overflow: hidden; } /* ====================================================== ONLY RESPONSIVE ====================================================== */ @media (min-width: 769px) { .image-lightbox-overlay { display: none !important; } }

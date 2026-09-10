@@ -266,8 +266,63 @@
                 <div class="section-header animate-on-scroll">
                     <h2 class="section-title gradient-text">Some of my recent projects</h2>
                 </div>
+                <div class="project-showcase-grid animate-on-scroll">
+                    <div class="showcase-card">
+                        <div class="showcase-header"><span>Achrili</span></div>
 
-                                <!-- PROJECT : E-commerce (Layout: Image Left, Details Right) -->
+                        <div class="showcase-content">
+                            <div class="text-features">
+                                <h1>Mobile App</h1>
+
+                                <h4 class="feature-title">FEATURES</h4>
+
+                                <ul>
+                                    <li>Designed and developed a modern mobile application that allows users to request
+                                        products and have them purchased and delivered to their address.</li>
+
+                                    <li>Created a simple and intuitive Arabic RTL interface focused on a smooth and
+                                        user-friendly ordering experience.</li>
+
+                                    <li>Implemented key features including product requests, delivery address
+                                        management, payment methods, and real-time order tracking.</li>
+                                </ul>
+                            </div>
+
+                            <div class="image-gallery">
+                                <img src="images/Project1-1-1.jpg" alt="Achrili Mobile App" class="showcase-img1">
+
+                                <img src="images/Project1-1-2.jpg" alt="Achrili Order Tracking" class="showcase-img1">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="details-column">
+                        <h2>Achrili</h2>
+
+                        <p class="project-category gradient-text">
+                            Mobile App, Delivery, On-Demand Service
+                        </p>
+
+                        <div class="project-tags">
+                            <span>React Native</span>
+                            <span>TypeScript</span>
+                            <span>node-js</span>
+                            <span>Mongo-db</span>
+                        </div>
+
+                        <div class="description-box glass-card">
+                            <p>
+                                A modern mobile application that simplifies product purchasing
+                                and delivery by allowing users to submit requests, manage their
+                                delivery details, and track their orders from request to delivery.
+                            </p>
+                        </div>
+
+
+                    </div>
+                </div>
+
+                <!-- PROJECT : E-commerce (Layout: Image Left, Details Right) -->
                 <div class="project-showcase-grid animate-on-scroll">
                     <div class="showcase-card">
                         <div class="showcase-header"><span>ShopEase</span></div>
@@ -276,8 +331,10 @@
                                 <h1>E-commerce</h1>
                                 <h4 class="feature-title">FEATURES</h4>
                                 <ul>
-                                    <li>Designed a modern and visually appealing e-commerce landing page using HTML, CSS, JavaScript, and Bootstrap.</li>
-                                    <li>Created engaging product showcase sections with clear call-to-action buttons to improve user conversion.</li>
+                                    <li>Designed a modern and visually appealing e-commerce landing page using HTML,
+                                        CSS, JavaScript, and Bootstrap.</li>
+                                    <li>Created engaging product showcase sections with clear call-to-action buttons to
+                                        improve user conversion.</li>
                                     <li>Implemented a fully responsive interface to ensure an optimal user experience on
                                         all devices.</li>
                                 </ul>
@@ -295,7 +352,8 @@
                             <span>Html</span><span>Css</span><span>JavaScript</span><span>Bootstrap</span>
                         </div>
                         <div class="description-box glass-card">
-                            <p>A modern and responsive e-commerce landing page designed to showcase products, engage visitors, and drive conversions.</p>
+                            <p>A modern and responsive e-commerce landing page designed to showcase products, engage
+                                visitors, and drive conversions.</p>
                         </div>
                         <div class="project-links">
                             <a href="https://achiri-asma.github.io/e-commerce_landingpage/"
@@ -491,74 +549,211 @@
     <script src="js/load-components.js"></script>
     <script src="js/load-sections.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-    <script>
-        // Christmas specific scripts
-        document.addEventListener('DOMContentLoaded', () => {
-            // Snowfall
-            const snowContainer = document.querySelector('.snow-container');
-            if (snowContainer) {
-                for (let i = 0; i < 150; i++) {
-                    const snowflake = document.createElement('div');
-                    snowflake.classList.add('snowflake');
-                    const size = Math.random() * 4 + 2;
-                    snowflake.style.width = size + 'px';
-                    snowflake.style.height = size + 'px';
-                    snowflake.style.left = Math.random() * 100 + 'vw';
-                    snowflake.style.animationDelay = Math.random() * -10 + 's';
-                    snowflake.style.animationDuration = 5 + Math.random() * 5 + 's';
-                    snowflake.style.opacity = Math.random();
-                    snowContainer.appendChild(snowflake);
-                }
-            }
+   <script>
+    const typed = new Typed("#typed", {
+        strings: [
+            "Full Stack Web Developer",
+            "Mobile Developer",
+        ],
+        typeSpeed: 70,
+        backSpeed: 40,
+        backDelay: 1800,
+        loop: true,
+        showCursor: true,
+        cursorChar: "|"
+    });
 
+    document.getElementById("download-cv").addEventListener("click", () => {
+        const link = document.createElement("a");
+        link.href = "../assets/Asma_Achiri_CV.pdf";
+        link.download = "Asma_Achiri_CV.pdf";
+        link.click();
+    });
 
-            const dropdownToggle = document.querySelector('.theme-switcher-dropdown .dropdown-toggle');
-            const dropdownMenu = document.querySelector('.theme-switcher-dropdown .dropdown-menu');
+    document.getElementById("currentYear").textContent = new Date().getFullYear();
 
-            if (dropdownToggle && dropdownMenu) {
-                dropdownToggle.addEventListener('click', () => {
-                    dropdownMenu.classList.toggle('show');
-                });
-
-                window.addEventListener('click', (event) => {
-                    if (!event.target.matches('.dropdown-toggle') && !event.target.matches('.dropdown-toggle i')) {
-                        if (dropdownMenu.classList.contains('show')) {
-                            dropdownMenu.classList.remove('show');
-                        }
-                    }
-                });
-            }
-        });
-
-        const typed = new Typed("#typed", {
-            strings: [
-                "Full Stack Web Developer",
-                "Mobile Developer",
-            ],
-            typeSpeed: 70,
-            backSpeed: 40,
-            backDelay: 1800,
-            loop: true,
-            showCursor: true,
-            cursorChar: "|"
-        });
-
-        document.getElementById("download-cv").addEventListener("click", () => {
-            const link = document.createElement("a");
-            link.href = "../assets/Asma_Achiri_CV.pdf";
-            link.download = "Asma_Achiri_CV.pdf";
-            link.click();
-        });
-
-        document.getElementById("currentYear").textContent = new Date().getFullYear();
-
-        document.addEventListener("mousemove", () => {
-            console.log("mousemove");
-        });
+    document.addEventListener("mousemove", () => {
+        console.log("mousemove");
+    });
 
 
 
     </script>
+
+```html
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+
+    // ======================================================
+    // MOBILE LIGHTBOX
+    // ======================================================
+
+    const mobileOnly = window.matchMedia("(max-width: 768px)");
+
+    // Create overlay
+    const overlay = document.createElement("div");
+    overlay.className = "image-lightbox-overlay";
+
+    overlay.innerHTML = `
+        <div class="image-lightbox-content">
+            <button class="image-lightbox-close" aria-label="Close">
+                &times;
+            </button>
+            <img src="" alt="">
+        </div>
+    `;
+
+    document.body.appendChild(overlay);
+
+    const overlayImg = overlay.querySelector("img");
+    const closeBtn = overlay.querySelector(".image-lightbox-close");
+
+    // Open lightbox
+    function openLightbox(src, alt) {
+        if (!mobileOnly.matches) return;
+
+        overlayImg.src = src;
+        overlayImg.alt = alt || "";
+
+        overlay.classList.add("active");
+        document.body.classList.add("lightbox-open");
+    }
+
+    // Close lightbox
+    function closeLightbox() {
+        overlay.classList.remove("active");
+        document.body.classList.remove("lightbox-open");
+
+        setTimeout(() => {
+            if (!overlay.classList.contains("active")) {
+                overlayImg.src = "";
+            }
+        }, 300);
+    }
+
+    // Portfolio images
+    document
+        .querySelectorAll(".showcase-img, .showcase-img1")
+        .forEach((img) => {
+
+            img.addEventListener("click", () => {
+
+                if (!mobileOnly.matches) return;
+
+                openLightbox(img.src, img.alt);
+            });
+
+        });
+
+    // Close button
+    closeBtn.addEventListener("click", closeLightbox);
+
+    // Click outside image
+    overlay.addEventListener("click", (e) => {
+
+        if (
+            e.target === overlay ||
+            e.target.classList.contains("image-lightbox-content")
+        ) {
+            closeLightbox();
+        }
+
+    });
+
+    // Escape key
+    document.addEventListener("keydown", (e) => {
+
+        if (e.key === "Escape") {
+            closeLightbox();
+        }
+
+    });
+
+    // Close when switching to desktop
+    mobileOnly.addEventListener("change", (e) => {
+
+        if (!e.matches) {
+            closeLightbox();
+        }
+
+    });
+
+
+    // ======================================================
+    // CHRISTMAS SCRIPTS
+    // ======================================================
+
+    // Snowfall
+    const snowContainer = document.querySelector(".snow-container");
+
+    if (snowContainer) {
+
+        for (let i = 0; i < 150; i++) {
+
+            const snowflake = document.createElement("div");
+
+            snowflake.classList.add("snowflake");
+
+            const size = Math.random() * 4 + 2;
+
+            snowflake.style.width = size + "px";
+            snowflake.style.height = size + "px";
+
+            snowflake.style.left = Math.random() * 100 + "vw";
+
+            snowflake.style.animationDelay =
+                Math.random() * -10 + "s";
+
+            snowflake.style.animationDuration =
+                5 + Math.random() * 5 + "s";
+
+            snowflake.style.opacity = Math.random();
+
+            snowContainer.appendChild(snowflake);
+        }
+    }
+
+
+    // ======================================================
+    // THEME SWITCHER DROPDOWN
+    // ======================================================
+
+    const dropdownToggle =
+        document.querySelector(
+            ".theme-switcher-dropdown .dropdown-toggle"
+        );
+
+    const dropdownMenu =
+        document.querySelector(
+            ".theme-switcher-dropdown .dropdown-menu"
+        );
+
+    if (dropdownToggle && dropdownMenu) {
+
+        dropdownToggle.addEventListener("click", (e) => {
+
+            e.stopPropagation();
+
+            dropdownMenu.classList.toggle("show");
+
+        });
+
+        window.addEventListener("click", (event) => {
+
+            if (
+                !event.target.closest(
+                    ".theme-switcher-dropdown"
+                )
+            ) {
+                dropdownMenu.classList.remove("show");
+            }
+
+        });
+
+    }
+
+});
+</script>
 
 
 </body>
