@@ -1,6 +1,7 @@
-/* ====================================================== */
-/* --- PROJECTS & WORKS SECTION --- */
-/* ====================================================== */
+/* ======================================================
+   PROJECTS & WORKS SECTION
+   ====================================================== */
+
 .projects-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -14,37 +15,37 @@
     flex-direction: column;
 }
 
-/* THAY THẾ TOÀN BỘ KHỐI NÀY */
+/* ======================================================
+   PROJECT IMAGE
+   ====================================================== */
+
 .project-image-container {
     background-color: #000000;
-    /* Nền đen cho "khung viền" */
     border-bottom: 1px solid var(--border-color);
     padding: 0.3rem;
-    /* Tạo khoảng trống xung quanh ảnh */
     aspect-ratio: 16 / 9;
-    /* Giữ tỉ lệ cho container */
     display: flex;
     align-items: center;
     justify-content: center;
+    overflow: hidden;
 }
 
-/* VÀ KHỐI NÀY */
 .project-image {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    /* Đảm bảo ảnh không bị méo */
     border-radius: 0.5rem;
-    /* Bo góc cho ảnh bên trong */
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-    /* Thêm bóng đổ cho đẹp */
     transition: transform 0.4s ease;
 }
 
 .project-card:hover .project-image {
     transform: scale(1.03);
-    /* Hiệu ứng zoom nhỏ hơn một chút cho tinh tế */
 }
+
+/* ======================================================
+   PROJECT CONTENT
+   ====================================================== */
 
 .project-content {
     padding: 1.5rem;
@@ -108,7 +109,11 @@
 
 .btn-project-demo {
     margin-left: auto;
-    background: linear-gradient(to right, var(--gradient-purple), var(--gradient-pink));
+    background: linear-gradient(
+        to right,
+        var(--gradient-purple),
+        var(--gradient-pink)
+    );
     color: white;
     padding: 0.5rem 1rem;
     border-radius: 9999px;
@@ -116,70 +121,77 @@
     font-size: 0.875rem;
     font-weight: 500;
 }
+
 /* ======================================================
-   RESPONSIVE — Section Projets (version corrigée v2)
-   À coller à la fin de css/projects.css
-   (remplace le bloc responsive précédent)
-   ====================================================== */
-/* ======================================================
-   RESPONSIVE — Section Projets (version corrigée v2)
-   À coller à la fin de css/projects.css
-   (remplace le bloc responsive précédent)
+   RESPONSIVE — PROJECT SHOWCASE
    ====================================================== */
 
-/* ---------- Tablettes (<= 992px) ---------- */
+/* ---------- Tablettes <= 992px ---------- */
+
 @media (max-width: 992px) {
+
     .project-showcase-grid {
         display: flex !important;
         flex-direction: column !important;
         gap: 1.5rem;
     }
 
-    /* Ordre voulu sur mobile pour TOUTES les cartes :
-       1) details-column (titre, catégorie, tags, description)
-       2) showcase-card (image + features)
-       -> annule le comportement layout-reversed sur mobile */
+    /* Details first */
     .details-column {
         order: 1 !important;
     }
 
+    /* Showcase second */
     .showcase-card {
         order: 2 !important;
     }
 }
 
-/* ---------- Mobile (<= 768px) ---------- */
+
+/* ---------- Mobile <= 768px ---------- */
+
 @media (max-width: 768px) {
 
-    /* Dans la showcase-card : image d'abord, texte des features ensuite */
+    /* Image first, features second */
     .showcase-content {
         display: flex !important;
         flex-direction: column-reverse !important;
         gap: 1.25rem;
     }
 
-    /* Galerie d'images plus grande, centrée */
+    /* Images stacked vertically */
     .image-gallery {
         display: flex !important;
-        flex-direction: row !important;
+        flex-direction: column !important;
+        align-items: center;
         justify-content: center;
         width: 100%;
         gap: 0.75rem;
     }
-
+.image-gallery1 {
+        display: flex !important;
+        flex-direction: row !important;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        gap: 0.75rem;
+    }
     .showcase-img,
     .showcase-img1 {
         width: 100% !important;
-        max-width: 150px;
+        max-width: 200px;
         height: auto !important;
         border-radius: 12px;
+        display: block;
     }
 
-    .image-gallery:has(> :only-child) .showcase-img,
-    .image-gallery:has(> :only-child) .showcase-img1 {
-        max-width: 70px;
+    /* If there is only one image */
+    .image-gallery:has(> :only-child) .showcase-img{
+        max-width: 250px;
     }
-
+.image-gallery:has(> :only-child) .showcase-img1 {
+        max-width: 100px;
+    }
     .showcase-header span {
         font-size: 1.1rem;
     }
@@ -215,17 +227,23 @@
     }
 }
 
-/* ---------- Petits mobiles (<= 480px) ---------- */
+
+/* ---------- Petits mobiles <= 480px ---------- */
+
 @media (max-width: 480px) {
+
     .showcase-card {
         padding: 1rem;
     }
 
-    .showcase-img,
-    .showcase-img1 {
-        max-width: 100px;
+    .showcase-img {
+        max-width: 280px;
     }
 
+    .showcase-img1 {
+        max-width: 150px;
+        height: 90px;
+    }
     .details-column {
         padding: 0 0.5rem;
     }
@@ -240,19 +258,29 @@
     }
 }
 
+
+/* ======================================================
+   IMAGE LIGHTBOX
+   ====================================================== */
+
 .image-lightbox-overlay {
     position: fixed;
     inset: 0;
     z-index: 999999;
+
     display: flex;
     align-items: center;
     justify-content: center;
+
     background: rgba(0, 0, 0, 0.55);
+
     backdrop-filter: blur(14px);
     -webkit-backdrop-filter: blur(14px);
+
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
+
     transition: 0.3s ease;
 }
 
@@ -266,9 +294,14 @@ body.lightbox-open {
     overflow: hidden;
 }
 
+
+/* ======================================================
+   LIGHTBOX — DESKTOP ONLY
+   ====================================================== */
+
 @media (min-width: 768px) {
+
     .image-lightbox-overlay {
         display: none !important;
     }
 }
-
